@@ -4,7 +4,7 @@ import time
 
 class TestCountPalindromicSlices(unittest.TestCase):
 	def setUp(self):
-		from count_palindromic_slices import solution
+		from count_palindromic_slices2 import solution
 		self.solution = solution
 
 	def test_zero(self):
