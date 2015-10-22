@@ -39,6 +39,27 @@ class TestFrogRiverOne(unittest.TestCase):
 		self.assertTrue(time_after - time_before <= 1, 
 		"the time difference is %d" % (time_after - time_before))
 		print(time_after - time_before)
-				
+
+class TestPermCheck(unittest.TestCase):
+	def setUp(self):
+		from perm_check import solution
+		self.solution = solution
+
+	def test_zero(self):
+		self.assertEqual(self.solution([4, 1, 3, 2]), 1)
+		self.assertEqual(self.solution([4, 1, 3]), 0)
+
+	def test_thousands(self):
+		A = []
+		N = 100000
+		for i in range(N):
+			A.append(randint(1, 1000000000))
+		time_before = time.time()	
+		S = self.solution(A)
+		time_after = time.time()
+		self.assertTrue(time_after - time_before <= 1, 
+		"the time difference is %d" % (time_after - time_before))
+		print(time_after - time_before)
+
 if __name__ == '__main__':
 	unittest.main()
