@@ -61,5 +61,28 @@ class TestPermCheck(unittest.TestCase):
 		"the time difference is %d" % (time_after - time_before))
 		print(time_after - time_before)
 
+class TestMissingInteger(unittest.TestCase):
+	def setUp(self):
+		from missing_integer import solution
+		self.solution = solution
+
+	def test_zero(self):
+		self.assertEqual(self.solution([1,3,6,4,1,2]), 5)
+
+	def test_extreme_min_max_int(self):
+		self.assertEqual(self.solution([-2147483648, 2147483647]), 1)
+
+	def test_thousands(self):
+		A = []
+		N = 100000
+		for i in range(N):
+			A.append(randint(-2147483648, 2147483647))
+		time_before = time.time()	
+		S = self.solution(A)
+		time_after = time.time()
+		self.assertTrue(time_after - time_before <= 1, 
+		"the time difference is %d" % (time_after - time_before))
+		print(time_after - time_before)
+
 if __name__ == '__main__':
 	unittest.main()
