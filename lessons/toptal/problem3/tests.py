@@ -2,13 +2,13 @@ import unittest
 from random import randint
 import time
 		
-class TestPassingCars(unittest.TestCase):
+class TestProbThree(unittest.TestCase):
 	def setUp(self):
-		from passing_cars import solution
+		from prob_three import solution
 		self.solution = solution
 
 	def test_zero(self):
-		self.assertEqual(self.solution([0, 1, 0, 1, 1]), 5)
+		self.assertEqual(self.solution([]), 5)
 		
 	def test_performance(self):
 		A = []
