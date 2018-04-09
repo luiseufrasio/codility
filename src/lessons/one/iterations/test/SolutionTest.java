@@ -7,6 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import lessons.one.iterations.Solution;
 
+/**
+ * Final Result:
+ * https://app.codility.com/demo/results/trainingP76KZ2-HTY/
+ * 
+ * @author Luis Eufrasio
+ *
+ */
 class SolutionTest {
 	Solution s = new Solution();
 

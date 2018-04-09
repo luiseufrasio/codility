@@ -45,7 +45,4 @@ public class Solution {
 		return result;
 	}
 
-	public static void main(String[] args) {
-		System.out.println(new Solution().solution(2147483647));
-	}
 }
