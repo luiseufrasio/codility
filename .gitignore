@@ -1,2 +1,5 @@
 *.pyc
 __pycache__
+/.classpath
+/.project
+/build/
