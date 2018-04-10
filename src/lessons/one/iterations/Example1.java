@@ -9,7 +9,8 @@ package lessons.one.iterations;
  * * * *
  * * * * *
  * </pre>
- * @author 49770413
+ * 
+ * @author Luis
  *
  */
 public class Example1 {
