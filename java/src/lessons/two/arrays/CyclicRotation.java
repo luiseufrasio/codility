@@ -1,6 +1,5 @@
 package lessons.two.arrays;
 
-import java.util.stream.Stream;
 import java.util.Arrays;
 
 /**
