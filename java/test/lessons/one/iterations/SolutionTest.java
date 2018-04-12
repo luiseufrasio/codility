@@ -1,4 +1,4 @@
-package lessons.one.iterations.test;
+package lessons.one.iterations;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
