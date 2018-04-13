@@ -6,10 +6,14 @@ public class SortingUtil {
 	}
 
 	static int[] randomArray(int N) {
+		return randomArray(N, 100);
+	}
+	
+	static int[] randomArray(int N, int k) {
 		int[] A = new int[N];
 		
 		for (int i = 0; i < A.length; i++) {
-			A[i] = (int) (Math.random() * 100);
+			A[i] = (int) (Math.random() * k);
 		}
 		
 		return A;
