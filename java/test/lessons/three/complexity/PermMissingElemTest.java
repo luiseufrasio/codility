@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 /**
- * https://app.codility.com/demo/results/trainingP8NAFU-YD6/
+ * https://app.codility.com/demo/results/training5M2Q7Z-6JB/
  * 
  * @author Luis
  */
@@ -24,23 +24,21 @@ class PermMissingElemTest {
 	
 	@Test
 	void largeRangeTest() {
-		final int[] array = new int[10];
-		final int[] array2 = new int[10];
+		final int[] array = new int[100_000];
+		final int[] array2 = new int[100_000];
 		
-		for (int i = 0, j = 0; i < array.length; i++, j++) {
-			array[i] = i + 1;
+		for (int i = 0, j = 0; i < array2.length; i++, j++) {
+			array[i] = i + 2;
 			
-			if (j == 5) {
-				array2[j] = j + 2;
+			if (j == 100_000) {
 				j++;
-			} else if (j < array2.length) {
-				array2[j] = j + 1;
 			}
+			array2[i] = j + 1;
 		}
 		
 		assertAll(
 				() -> assertEquals(1, pme.solution(array)),
-				() -> assertEquals(5, pme.solution(array2))
+				() -> assertEquals(100_001, pme.solution(array2))
 		);
 	}
 
