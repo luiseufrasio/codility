@@ -65,7 +65,7 @@ Complexity:
 expected worst-case time complexity is O(N+M);
 expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).</pre>
  * 
- * @author 49770413
+ * @author Luis
  * @see <a href='https://app.codility.com/demo/results/trainingEY5QW4-PYC/'>Results</a>
  */
 public class MaxCounters {

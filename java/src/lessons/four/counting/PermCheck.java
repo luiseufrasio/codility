@@ -53,7 +53,6 @@ expected worst-case space complexity is O(N), beyond input storage (not counting
  * 
  * @author Luis
  * @see <a href='https://app.codility.com/demo/results/trainingT5JY7H-JA7/'>Results</a>
- * 
  */
 public class PermCheck {
 	
