@@ -49,8 +49,8 @@ public class OddOccurrencesInArray {
 	}
 	
 	public int solution(int[] A) {
-		final Boolean TRUE = new Boolean(true);
-		final Boolean FALSE = new Boolean(false);
+		final Boolean TRUE = true;
+		final Boolean FALSE = false;
 	    int N = A.length;
 	    if (N == 1) {
 	    	return A[0];
