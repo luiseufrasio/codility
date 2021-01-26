@@ -1,3 +1,5 @@
+package lessons.six.sort;
+
 import java.util.*;
 /**
 <pre>Write a function

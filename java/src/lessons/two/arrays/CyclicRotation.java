@@ -50,33 +50,40 @@ public class CyclicRotation {
 	public CyclicRotation() {
 	}
 	
-	public int[] solution(int[] A, int K) {
-	    int N = A.length;
-	    if (N == 0) {
-	    	return A;
-	    }
-	    
-	    int mod = K % N;
-	    if (mod == 0) {
-	    	return A;
-	    }
-	    
-	    int[] result = new int[A.length];
-	    for (int i = 0; i < A.length; i++) {
-	    	if (i + mod <= N-1) {
-	    		result[i + mod] = A[i];
-	    	} else {
-	    		result[i + mod - N] = A[i];
-	    	}
-	    }
-	    
-	    return result;
+	public int[] solution(int[] A, int K, char direction) {
+		int N = A.length;
+		if (N == 0 || K == 0) {
+			return A;
+		}
+		
+		int mod = K % N;
+        if (mod == 0) {
+            return A;
+        }
+        
+        int[] afterRotation = new int[N];
+        for (int i = 0; i < N; i++) {
+        	if (direction == 'R') {
+	        	if (i + mod <= N-1) {
+	        		afterRotation[i + mod] = A[i];
+		    	} else {
+		    		afterRotation[i + mod - N] = A[i];
+		    	}
+        	} else {
+        		if (i - mod >= 0) {
+	        		afterRotation[i - mod] = A[i];
+		    	} else {
+		    		afterRotation[i - (mod - N)] = A[i];
+		    	}
+        	}
+        }
+
+        return afterRotation;
 	}
 
 	public static void main(String[] args) {
-
-		int[] entry = new int[] {3, 8, 9, 7, 6} ;
-		int[] result = new CyclicRotation().solution(entry, 3);
+		int[] entry = new int[] {1, 2, 3, 4, 5, 6} ;
+		int[] result = new CyclicRotation().solution(entry, 2, 'L');
 		
 		Arrays.stream(result).forEach(
 			(s) -> System.out.print(s + " ")

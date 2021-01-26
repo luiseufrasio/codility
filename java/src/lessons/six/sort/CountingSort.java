@@ -1,4 +1,4 @@
-package lessons.six.sorting;
+package lessons.six.sort;
 
 import java.util.Arrays;
 
